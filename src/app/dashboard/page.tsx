@@ -18,15 +18,14 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export default function DashboardPage() {
   return (
     <div className="flex-1 overflow-hidden">
-      <header className="flex h-16 items-end justify-between border-2 ml-3 mr-2 rounded-[12px] bg-white px-4 pb-4">
+      <header className="flex h-16 items-center justify-between border-2 ml-3 mr-2 rounded-[12px] bg-white px-4">
         <h1 className="text-2xl font-semibold">Dashboard</h1>
-        <button className="rounded-full bg-gray-100 p-2">
-          <Bell className="h-5 w-5" />
-        </button>
+        <Image src={"/dashboard_icon.png"} height={36} width={36} alt="Dashboard Icon" />
       </header>
 
       <main className="p-4 h-full overflow-hidden">
@@ -74,6 +73,7 @@ export default function DashboardPage() {
               </CardHeader>
 
               <CardContent>
+               
                 {/* Notifications */}
                 <TabsContent value="notifications" className="h-full m-0">
                   <div className="px-6 pb-2">
@@ -545,6 +545,7 @@ export default function DashboardPage() {
                     </div>
                   </ScrollArea>
                 </TabsContent>
+
               </CardContent>
             </Card>
           </Tabs>
